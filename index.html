@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarioRazaudiohifi - Equipos Audio HiFi de Segunda Mano</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="#">www.MarioRazaudiohifi</a></h1>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="carrito-icon" onclick="toggleCarrito()">🛒 <span id="contador">0</span></div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Equipos Audio HiFi de Segunda Mano</h2>
+        <p>Calidad premium a precios imbatibles. Revisados y con garantía.</p>
+    </section>
+
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-grid">
+            <!-- Ejemplos de productos basados en tus intereses en tubos y preamps [cite:8] -->
+            <div class="producto" data-id="1" data-nombre="Preamp con tubos 6J4" data-precio="250">
+                <img src="https://via.placeholder.com/300x200?text=Preamp+6J4" alt="Preamp 6J4">
+                <h3>Preamp con tubos 6J4</h3>
+                <p>Excelente estado, upgrade Mullard disponible. Sonido cálido y detallado.</p>
+                <span class="precio">250€</span>
+                <button onclick="agregarCarrito(1, 'Preamp 6J4', 250)">Añadir al carrito</button>
+            </div>
+            <div class="producto" data-id="2" data-nombre="Amplificador HiFi Yamaha" data-precio="400">
+                <img src="https://via.placeholder.com/300x200?text=Amplificador+Yamaha" alt="Yamaha Amp">
+                <h3>Amplificador Yamaha AX-500</h3>
+                <p>Vintage, revisado. Potente bass y claridad.</p>
+                <span class="precio">400€</span>
+                <button onclick="agregarCarrito(2, 'Amplificador Yamaha', 400)">Añadir al carrito</button>
+            </div>
+            <div class="producto" data-id="3" data-nombre="Altavoces Pioneer" data-precio="350">
+                <img src="https://via.placeholder.com/300x200?text=Altavoces+Pioneer" alt="Pioneer Speakers">
+                <h3>Altavoces Pioneer S-71</h3>
+                <p>Segunda mano, como nuevos. Sonido equilibrado.</p>
+                <span class="precio">350€</span>
+                <button onclick="agregarCarrito(3, 'Altavoces Pioneer', 350)">Añadir al carrito</button>
+            </div>
+            <!-- Añade más productos aquí -->
+        </div>
+    </section>
+
+    <div id="carrito" class="carrito oculto">
+        <h2>Carrito de Compras</h2>
+        <div id="lista-carrito"></div>
+        <div class="total">
+            <strong>Total: <span id="total">0€</span></strong>
+        </div>
+        <button onclick="contactar()">Contactar para Compra</button>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </div>
+
+    <footer id="contacto">
+        <p>Contacto: mario@razaudiohifi.com | Cerdanyola del Vallès, Barcelona | WhatsApp: +34 XXX XXX XXX</p>
+        <p>Envíos a toda España. Garantía 14 días.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
